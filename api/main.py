@@ -1,5 +1,5 @@
-from fastapi import FastAPI
 from mangum import Mangum
+from fastapi import FastAPI
 
 app =  FastAPI()
 
@@ -7,4 +7,4 @@ app =  FastAPI()
 async def root():
     return {"message": "Hello World"}
 
-handler = Mangum(app)
+handler = Mangum(app=app)
