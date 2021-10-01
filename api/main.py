@@ -8,4 +8,8 @@ app = FastAPI()
 async def root():
     return {"message": "Hello World"}
 
+@app.get("/items")
+async def list_items():
+    return {"items": "Mango"}
+
 handler = Mangum(app=app)
