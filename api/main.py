@@ -10,6 +10,6 @@ async def root():
 
 @app.get("/items")
 async def list_items():
-    return {"items": "Mango"}
+    return {"items": "Apple"}
 
 handler = Mangum(app=app)
